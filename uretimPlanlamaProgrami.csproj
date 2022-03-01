@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9E3B062-CFE9-4967-B8B0-FBF30AAB39A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>uretimPlanlamaProgrami</RootNamespace>
+    <AssemblyName>uretimPlanlamaProgrami</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>taysanLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.TeamFoundation.Diff, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RadControlSpy, Version=2015.3.930.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\RadControlSpy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MESLEKİ_STAJ_ 11011066\uretimPlanlamaProgrami\Setup1\Setup1\Express\DVD-5\DiskImages\DISK1\taysanplastik\TaysanPlastik\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikData, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="VisualStyleBuilder.Design, Version=2015.3.930.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin\VisualStyleBuilder.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAnasayfa.Designer.cs">
+      <DependentUpon>AdminAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anlikBitirmeKontrol.cs" />
+    <Compile Include="beklemeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="beklemeFormu.Designer.cs">
+      <DependentUpon>beklemeFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CutsomAppoinmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CutsomAppoinmentForm.Designer.cs">
+      <DependentUpon>CutsomAppoinmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyarlar.Designer.cs">
+      <DependentUpon>frmAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAylikRaporr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAylikRaporr.Designer.cs">
+      <DependentUpon>frmAylikRaporr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGelismisArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGelismisArama.Designer.cs">
+      <DependentUpon>frmGelismisArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGunlukPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGunlukPlan.Designer.cs">
+      <DependentUpon>frmGunlukPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\ClassSiparis.cs" />
+    <Compile Include="RadFormlari\Fonksiyonlar.cs" />
+    <Compile Include="RadFormlari\frmHaftalikPlanNEw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\frmHaftalikPlanNEw.Designer.cs">
+      <DependentUpon>frmHaftalikPlanNEw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHakkimizda.Designer.cs">
+      <DependentUpon>frmHakkimizda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHatPlanlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHatPlanlari.Designer.cs">
+      <DependentUpon>frmHatPlanlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOzelSiparisekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOzelSiparisekle.Designer.cs">
+      <DependentUpon>frmOzelSiparisekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRAPORLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRAPORLAR.Designer.cs">
+      <DependentUpon>frmRAPORLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHaftalikPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHaftalikPlan.Designer.cs">
+      <DependentUpon>frmHaftalikPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHammaddeDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHammaddeDuzenle.Designer.cs">
+      <DependentUpon>frmHammaddeDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHammaddeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHammaddeEkle.Designer.cs">
+      <DependentUpon>frmHammaddeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHatDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHatDuzenle.Designer.cs">
+      <DependentUpon>frmHatDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKullaniciDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullaniciDuzenle.Designer.cs">
+      <DependentUpon>frmKullaniciDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullaniciEkle.Designer.cs">
+      <DependentUpon>frmKullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRenkDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenkDuzenle.Designer.cs">
+      <DependentUpon>frmRenkDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRenkEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenkEkle.Designer.cs">
+      <DependentUpon>frmRenkEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiparisDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiparisDuzenle.Designer.cs">
+      <DependentUpon>frmSiparisDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiparisEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiparisEkle.Designer.cs">
+      <DependentUpon>frmSiparisEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUretimHattiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUretimHattiEkle.Designer.cs">
+      <DependentUpon>frmUretimHattiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunDuzenle.Designer.cs">
+      <DependentUpon>frmUrunDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunEkle.Designer.cs">
+      <DependentUpon>frmUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunResmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunResmi.Designer.cs">
+      <DependentUpon>frmUrunResmi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYedekAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYedekAl.Designer.cs">
+      <DependentUpon>frmYedekAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>genelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hatalar.cs" />
+    <Compile Include="PlanlamaDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlanlamaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlanlamaDataSet6.cs">
+      <DependentUpon>PlanlamaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlanlamaDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlanlamaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\frmHatPasiflestir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\frmHatPasiflestir.Designer.cs">
+      <DependentUpon>frmHatPasiflestir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\HatRenkleri.cs" />
+    <Compile Include="RadFormlari\radfrmSiparisDetayi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radfrmSiparisDetayi.Designer.cs">
+      <DependentUpon>radfrmSiparisDetayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radFrmTemaAyarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radFrmTemaAyarlari.Designer.cs">
+      <DependentUpon>radFrmTemaAyarlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radGiris.Designer.cs">
+      <DependentUpon>radGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radHammaddeDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radHammaddeDuzenle.Designer.cs">
+      <DependentUpon>radHammaddeDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radHammaddeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radHammaddeEkle.Designer.cs">
+      <DependentUpon>radHammaddeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radHammaddeIcerikDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radHammaddeIcerikDuzenle.Designer.cs">
+      <DependentUpon>radHammaddeIcerikDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radHatDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radHatDuzenle.Designer.cs">
+      <DependentUpon>radHatDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radHatEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radHatEkle.Designer.cs">
+      <DependentUpon>radHatEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radIHammaddecerikEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radIHammaddecerikEkle.Designer.cs">
+      <DependentUpon>radIHammaddecerikEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radKullaniciDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radKullaniciDuzenle.Designer.cs">
+      <DependentUpon>radKullaniciDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radKullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radKullaniciEkle.Designer.cs">
+      <DependentUpon>radKullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radOzelSiparisEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radOzelSiparisEkle.Designer.cs">
+      <DependentUpon>radOzelSiparisEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radRaporlar1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radRaporlar1.Designer.cs">
+      <DependentUpon>radRaporlar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radRenkDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radRenkDuzenle.Designer.cs">
+      <DependentUpon>radRenkDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radRenkEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radRenkEkle.Designer.cs">
+      <DependentUpon>radRenkEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radSiparisDuzenleButonFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radSiparisDuzenleButonFormu.Designer.cs">
+      <DependentUpon>radSiparisDuzenleButonFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radSiparisOzeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radSiparisOzeti.Designer.cs">
+      <DependentUpon>radSiparisOzeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radSistemAyarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radSistemAyarlari.Designer.cs">
+      <DependentUpon>radSistemAyarlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunDuzenle.Designer.cs">
+      <DependentUpon>radUrunDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radNormalSiparisEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radNormalSiparisEkle.Designer.cs">
+      <DependentUpon>radNormalSiparisEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radPlanFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radPlanFormu.Designer.cs">
+      <DependentUpon>radPlanFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radAnasayfa.Designer.cs">
+      <DependentUpon>radAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radSiparisDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radSiparisDuzenle.Designer.cs">
+      <DependentUpon>radSiparisDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunEkle.Designer.cs">
+      <DependentUpon>radUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunResimFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunResimFormu.Designer.cs">
+      <DependentUpon>radUrunResimFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunResmiGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radUrunResmiGor.Designer.cs">
+      <DependentUpon>radUrunResmiGor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\radYedekAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\radYedekAl.Designer.cs">
+      <DependentUpon>radYedekAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFormlari\SmsGonderme.cs" />
+    <Compile Include="RadFormlari\SMSPaketi.cs" />
+    <Compile Include="RadFormlari\VeritabaniYuklemeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFormlari\VeritabaniYuklemeFormu.Designer.cs">
+      <DependentUpon>VeritabaniYuklemeFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ses.cs" />
+    <Compile Include="silinenFonksiyonlar.cs" />
+    <Compile Include="Siparis.cs" />
+    <Compile Include="siparisTabloDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisTabloDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="urunRapor.cs" />
+    <Compile Include="veritabani.cs" />
+    <EmbeddedResource Include="AdminAnasayfa.resx">
+      <DependentUpon>AdminAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="beklemeFormu.resx">
+      <DependentUpon>beklemeFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CutsomAppoinmentForm.resx">
+      <DependentUpon>CutsomAppoinmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAyarlar.resx">
+      <DependentUpon>frmAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAylikRaporr.resx">
+      <DependentUpon>frmAylikRaporr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGelismisArama.resx">
+      <DependentUpon>frmGelismisArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGunlukPlan.resx">
+      <DependentUpon>frmGunlukPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\frmHaftalikPlanNEw.resx">
+      <DependentUpon>frmHaftalikPlanNEw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHakkimizda.resx">
+      <DependentUpon>frmHakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHatPlanlari.resx">
+      <DependentUpon>frmHatPlanlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOzelSiparisekle.resx">
+      <DependentUpon>frmOzelSiparisekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRAPORLAR.resx">
+      <DependentUpon>frmRAPORLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHaftalikPlan.resx">
+      <DependentUpon>frmHaftalikPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHammaddeDuzenle.resx">
+      <DependentUpon>frmHammaddeDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHammaddeEkle.resx">
+      <DependentUpon>frmHammaddeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHatDuzenle.resx">
+      <DependentUpon>frmHatDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciDuzenle.resx">
+      <DependentUpon>frmKullaniciDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciEkle.resx">
+      <DependentUpon>frmKullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRenkDuzenle.resx">
+      <DependentUpon>frmRenkDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRenkEkle.resx">
+      <DependentUpon>frmRenkEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiparisDuzenle.resx">
+      <DependentUpon>frmSiparisDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiparisEkle.resx">
+      <DependentUpon>frmSiparisEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUretimHattiEkle.resx">
+      <DependentUpon>frmUretimHattiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunDuzenle.resx">
+      <DependentUpon>frmUrunDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunEkle.resx">
+      <DependentUpon>frmUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunResmi.resx">
+      <DependentUpon>frmUrunResmi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYedekAl.resx">
+      <DependentUpon>frmYedekAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\frmHatPasiflestir.resx">
+      <DependentUpon>frmHatPasiflestir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radfrmSiparisDetayi.resx">
+      <DependentUpon>radfrmSiparisDetayi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radFrmTemaAyarlari.resx">
+      <DependentUpon>radFrmTemaAyarlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radGiris.resx">
+      <DependentUpon>radGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radHammaddeDuzenle.resx">
+      <DependentUpon>radHammaddeDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radHammaddeEkle.resx">
+      <DependentUpon>radHammaddeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radHammaddeIcerikDuzenle.resx">
+      <DependentUpon>radHammaddeIcerikDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radHatDuzenle.resx">
+      <DependentUpon>radHatDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radHatEkle.resx">
+      <DependentUpon>radHatEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radIHammaddecerikEkle.resx">
+      <DependentUpon>radIHammaddecerikEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radKullaniciDuzenle.resx">
+      <DependentUpon>radKullaniciDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radKullaniciEkle.resx">
+      <DependentUpon>radKullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radOzelSiparisEkle.resx">
+      <DependentUpon>radOzelSiparisEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radRaporlar1.resx">
+      <DependentUpon>radRaporlar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radRenkDuzenle.resx">
+      <DependentUpon>radRenkDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radRenkEkle.resx">
+      <DependentUpon>radRenkEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radSiparisDuzenleButonFormu.resx">
+      <DependentUpon>radSiparisDuzenleButonFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radSiparisOzeti.resx">
+      <DependentUpon>radSiparisOzeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radSistemAyarlari.resx">
+      <DependentUpon>radSistemAyarlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radUrunDuzenle.resx">
+      <DependentUpon>radUrunDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radNormalSiparisEkle.resx">
+      <DependentUpon>radNormalSiparisEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radPlanFormu.resx">
+      <DependentUpon>radPlanFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radAnasayfa.resx">
+      <DependentUpon>radAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radSiparisDuzenle.resx">
+      <DependentUpon>radSiparisDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radUrunEkle.resx">
+      <DependentUpon>radUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radUrunResimFormu.resx">
+      <DependentUpon>radUrunResimFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radUrunResmiGor.resx">
+      <DependentUpon>radUrunResmiGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\radYedekAl.resx">
+      <DependentUpon>radYedekAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFormlari\Report1.rdlc" />
+    <EmbeddedResource Include="RadFormlari\VeritabaniYuklemeFormu.resx">
+      <DependentUpon>VeritabaniYuklemeFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <None Include="app.config" />
+    <Fakes Include="Fakes\Telerik.WinControls.fakes" />
+    <None Include="genelDataSet.xsc">
+      <DependentUpon>genelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="genelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>genelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="genelDataSet.xss">
+      <DependentUpon>genelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PlanlamaDataSet5.xsc">
+      <DependentUpon>PlanlamaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PlanlamaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlanlamaDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PlanlamaDataSet5.xss">
+      <DependentUpon>PlanlamaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PlanlamaDataSet6.xsc">
+      <DependentUpon>PlanlamaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="PlanlamaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlanlamaDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PlanlamaDataSet6.xss">
+      <DependentUpon>PlanlamaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="siparisTabloDataSet.xsc">
+      <DependentUpon>siparisTabloDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="siparisTabloDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>siparisTabloDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="siparisTabloDataSet.xss">
+      <DependentUpon>siparisTabloDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gif\yuk.gif" />
+    <Content Include="gif\Yukleniyor.gif" />
+    <Content Include="RadFormlari\iconlar\bgu.jpg" />
+    <Content Include="RadFormlari\iconlar\Bul.png" />
+    <Content Include="RadFormlari\iconlar\delete.png" />
+    <Content Include="RadFormlari\iconlar\ekle.png" />
+    <Content Include="RadFormlari\iconlar\ekleNew.png" />
+    <Content Include="RadFormlari\iconlar\geri.png" />
+    <Content Include="RadFormlari\iconlar\geriNew.png" />
+    <Content Include="RadFormlari\iconlar\güncelleme.jpg" />
+    <Content Include="RadFormlari\iconlar\güncelleme.png" />
+    <Content Include="RadFormlari\iconlar\ileri.png" />
+    <Content Include="RadFormlari\iconlar\ileriNew.png" />
+    <Content Include="RadFormlari\iconlar\Kapat.png" />
+    <Content Include="RadFormlari\iconlar\Kaydet.png" />
+    <Content Include="RadFormlari\iconlar\kullaniciEkle.png" />
+    <Content Include="RadFormlari\iconlar\save.png" />
+    <Content Include="RadFormlari\iconlar\sill.jpg" />
+    <Content Include="RadFormlari\iconlar\simdi.png" />
+    <Content Include="RadFormlari\iconlar\Yeni Kullanıcı.png" />
+    <Content Include="RadFormlari\iconlar\yenileme.png" />
+    <Content Include="logo\taysanLogo.ico" />
+    <Content Include="media\hata.wav" />
+    <Content Include="media\onay.wav" />
+    <Content Include="resimler\taysanLogo.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\güncelleme.png" />
+    <None Include="Resources\Kapat.png" />
+    <None Include="Resources\simdi.png" />
+    <Content Include="taysanLogo.ico" />
+    <Content Include="tema\market.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

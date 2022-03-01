@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="siparisTabloDataSet" targetNamespace="http://tempuri.org/siparisTabloDataSet.xsd" xmlns:mstns="http://tempuri.org/siparisTabloDataSet.xsd" xmlns="http://tempuri.org/siparisTabloDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PlanlamaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PlanlamaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.uretimPlanlamaProgrami.Properties.Settings.GlobalReference.Default.PlanlamaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="siparisTableAdapter" GeneratorDataComponentClassName="siparisTableAdapter" Name="siparis" UserDataComponentName="siparisTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PlanlamaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select urunKod as ÜrünKodu,siparisKod as SiparişKodu,firmaAdi as FirmaAdı,adi as Hammadde,oncelikSirasi as OncelikSırası,boy,adet,renkAdi,baslangicTarihi,bitisTarihi,toplamSure,gerekenUrunMiktari,kullanilacakHat HATNO,durum,kayitTarihi as KayıtTarihi from siparis s,DevamDurumu d,renkler r,hammadde h where r.id=s.renk and s.devamDurumu=d.id and h.id=s.hammadde order by s.id desc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="boy" DataSetColumn="boy" />
+              <Mapping SourceColumn="adet" DataSetColumn="adet" />
+              <Mapping SourceColumn="baslangicTarihi" DataSetColumn="baslangicTarihi" />
+              <Mapping SourceColumn="bitisTarihi" DataSetColumn="bitisTarihi" />
+              <Mapping SourceColumn="gerekenUrunMiktari" DataSetColumn="gerekenUrunMiktari" />
+              <Mapping SourceColumn="ÜrünKodu" DataSetColumn="ÜrünKodu" />
+              <Mapping SourceColumn="SiparişKodu" DataSetColumn="SiparişKodu" />
+              <Mapping SourceColumn="FirmaAdı" DataSetColumn="FirmaAdı" />
+              <Mapping SourceColumn="Hammadde" DataSetColumn="Hammadde" />
+              <Mapping SourceColumn="OncelikSırası" DataSetColumn="OncelikSırası" />
+              <Mapping SourceColumn="renkAdi" DataSetColumn="renkAdi" />
+              <Mapping SourceColumn="toplamSure" DataSetColumn="toplamSure1" />
+              <Mapping SourceColumn="HATNO" DataSetColumn="HATNO" />
+              <Mapping SourceColumn="durum" DataSetColumn="durum" />
+              <Mapping SourceColumn="KayıtTarihi" DataSetColumn="KayıtTarihi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="siparisTabloDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="siparisTabloDataSet" msprop:Generator_UserDSName="siparisTabloDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="siparis" msprop:Generator_TableClassName="siparisDataTable" msprop:Generator_TableVarName="tablesiparis" msprop:Generator_TablePropName="siparis" msprop:Generator_RowDeletingName="siparisRowDeleting" msprop:Generator_RowChangingName="siparisRowChanging" msprop:Generator_RowEvHandlerName="siparisRowChangeEventHandler" msprop:Generator_RowDeletedName="siparisRowDeleted" msprop:Generator_UserTableName="siparis" msprop:Generator_RowChangedName="siparisRowChanged" msprop:Generator_RowEvArgName="siparisRowChangeEvent" msprop:Generator_RowClassName="siparisRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="boy" msprop:Generator_ColumnVarNameInTable="columnboy" msprop:Generator_ColumnPropNameInRow="boy" msprop:Generator_ColumnPropNameInTable="boyColumn" msprop:Generator_UserColumnName="boy" type="xs:long" />
+              <xs:element name="adet" msprop:Generator_ColumnVarNameInTable="columnadet" msprop:Generator_ColumnPropNameInRow="adet" msprop:Generator_ColumnPropNameInTable="adetColumn" msprop:Generator_UserColumnName="adet" type="xs:int" />
+              <xs:element name="baslangicTarihi" msprop:Generator_ColumnVarNameInTable="columnbaslangicTarihi" msprop:Generator_ColumnPropNameInRow="baslangicTarihi" msprop:Generator_ColumnPropNameInTable="baslangicTarihiColumn" msprop:Generator_UserColumnName="baslangicTarihi" type="xs:dateTime" />
+              <xs:element name="bitisTarihi" msprop:Generator_ColumnVarNameInTable="columnbitisTarihi" msprop:Generator_ColumnPropNameInRow="bitisTarihi" msprop:Generator_ColumnPropNameInTable="bitisTarihiColumn" msprop:Generator_UserColumnName="bitisTarihi" type="xs:dateTime" />
+              <xs:element name="toplamSure" msprop:Generator_ColumnVarNameInTable="columntoplamSure" msprop:Generator_ColumnPropNameInRow="toplamSure" msprop:Generator_ColumnPropNameInTable="toplamSureColumn" msprop:Generator_UserColumnName="toplamSure" type="xs:double" />
+              <xs:element name="gerekenUrunMiktari" msprop:Generator_ColumnVarNameInTable="columngerekenUrunMiktari" msprop:Generator_ColumnPropNameInRow="gerekenUrunMiktari" msprop:Generator_ColumnPropNameInTable="gerekenUrunMiktariColumn" msprop:Generator_UserColumnName="gerekenUrunMiktari" type="xs:double" />
+              <xs:element name="ÜrünKodu" msprop:Generator_ColumnVarNameInTable="columnÜrünKodu" msprop:Generator_ColumnPropNameInRow="ÜrünKodu" msprop:Generator_ColumnPropNameInTable="ÜrünKoduColumn" msprop:Generator_UserColumnName="ÜrünKodu" type="xs:int" minOccurs="0" />
+              <xs:element name="SiparişKodu" msprop:Generator_ColumnVarNameInTable="columnSiparişKodu" msprop:Generator_ColumnPropNameInRow="SiparişKodu" msprop:Generator_ColumnPropNameInTable="SiparişKoduColumn" msprop:Generator_UserColumnName="SiparişKodu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirmaAdı" msprop:Generator_ColumnVarNameInTable="columnFirmaAdı" msprop:Generator_ColumnPropNameInRow="FirmaAdı" msprop:Generator_ColumnPropNameInTable="FirmaAdıColumn" msprop:Generator_UserColumnName="FirmaAdı">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hammadde" msprop:Generator_ColumnVarNameInTable="columnHammadde" msprop:Generator_ColumnPropNameInRow="Hammadde" msprop:Generator_ColumnPropNameInTable="HammaddeColumn" msprop:Generator_UserColumnName="Hammadde">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OncelikSırası" msprop:Generator_ColumnVarNameInTable="columnOncelikSırası" msprop:Generator_ColumnPropNameInRow="OncelikSırası" msprop:Generator_ColumnPropNameInTable="OncelikSırasıColumn" msprop:Generator_UserColumnName="OncelikSırası">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="renkAdi" msprop:Generator_ColumnVarNameInTable="columnrenkAdi" msprop:Generator_ColumnPropNameInRow="renkAdi" msprop:Generator_ColumnPropNameInTable="renkAdiColumn" msprop:Generator_UserColumnName="renkAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="toplamSure1" msdata:Caption="toplamSure" msprop:Generator_ColumnVarNameInTable="columntoplamSure1" msprop:Generator_ColumnPropNameInRow="toplamSure1" msprop:Generator_ColumnPropNameInTable="toplamSure1Column" msprop:Generator_UserColumnName="toplamSure1" type="xs:int" />
+              <xs:element name="HATNO" msprop:Generator_ColumnVarNameInTable="columnHATNO" msprop:Generator_ColumnPropNameInRow="HATNO" msprop:Generator_ColumnPropNameInTable="HATNOColumn" msprop:Generator_UserColumnName="HATNO" type="xs:int" minOccurs="0" />
+              <xs:element name="durum" msprop:Generator_ColumnVarNameInTable="columndurum" msprop:Generator_ColumnPropNameInRow="durum" msprop:Generator_ColumnPropNameInTable="durumColumn" msprop:Generator_UserColumnName="durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KayıtTarihi" msprop:Generator_ColumnVarNameInTable="columnKayıtTarihi" msprop:Generator_ColumnPropNameInRow="KayıtTarihi" msprop:Generator_ColumnPropNameInTable="KayıtTarihiColumn" msprop:Generator_UserColumnName="KayıtTarihi" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
